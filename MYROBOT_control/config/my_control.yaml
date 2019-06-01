@@ -1,0 +1,36 @@
+two_robot:
+  # Publish all joint states -----------------------------------
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 20  
+ 
+  # Position Controllers ---------------------------------------
+  joint1_velocity_controller:
+    type: velocity_controllers/JointVelocityController
+    joint: f1
+    pid: {p: 100000000 , i: 0.01, d: 1.0}
+
+  joint2_velocity_controller:
+    type: velocity_controllers/JointVelocityController
+    joint: f2
+    pid: {p: 100000000 , i: 0.01, d: 1.0}
+
+  joint3_velocity_controller:
+    type: velocity_controllers/JointVelocityController
+    joint: f3
+    pid: {p: 100000000 , i: 0.01, d: 1.0}
+
+  joint4_velocity_controller:
+    type: velocity_controllers/JointVelocityController
+    joint: f4
+    pid: {p: 100000000, i: 0.01, d: 1.0}
+
+  joint5_velocity_controller:
+    type: velocity_controllers/JointVelocityController
+    joint: f5
+    pid: {p: 100000000 , i: 0.01, d: 1.0}
+
+  joint6_velocity_controller:
+    type: velocity_controllers/JointVelocityController
+    joint: f6
+    pid: {p: 100000000 , i: 0.01, d: 1.0}

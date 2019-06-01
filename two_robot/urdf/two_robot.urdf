@@ -1,0 +1,473 @@
+<robot
+  name="two_robot">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.250039208129731 0.0584396863666036 0.119264108531146"
+        rpy="0 0 0" />
+      <mass
+        value="4" />
+      <inertia
+        ixx="0.2"
+        ixy="0"
+        ixz="0"
+        iyy="0.2771"
+        iyz="0"
+        izz="0.2771" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://two_robot/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://two_robot/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="leg1">
+    <inertial>
+      <origin
+        xyz="0 -0.0513140366185233 -0.02800000000006"
+        rpy="0 0 0" />
+      <mass
+        value="2" />
+      <inertia
+        ixx="0.00071359955535991"
+        ixy="6.37735898118155E-07"
+        ixz="-4.30305240781727E-16"
+        iyy="9.55528011055232E-05"
+        iyz="-6.11418614570661E-17"
+        izz="0.000694431360588034" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://two_robot/meshes/leg1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://two_robot/meshes/leg1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="f1"
+    type="continuous">
+    <origin
+      xyz="0.055 0.027 0.05"
+      rpy="1.5707963 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="leg1" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="leg2">
+    <inertial>
+      <origin
+        xyz="8.49062894526798E-05 -0.0513140366184417 -0.028000000000006"
+        rpy="0 0 0" />
+      <mass
+        value="2" />
+      <inertia
+        ixx="0.000713599555357865"
+        ixy="6.3773589813961E-07"
+        ixz="-4.30198946233685E-16"
+        iyy="9.55528011054895E-05"
+        iyz="-6.10860906380391E-17"
+        izz="0.000694431360586016" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://two_robot/meshes/leg1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://two_robot/meshes/leg1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="f2"
+    type="continuous">
+    <origin
+      xyz="0.25 0.092 0.05"
+      rpy="1.5707963 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="leg2" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="leg3">
+    <inertial>
+      <origin
+        xyz="0 -0.047080247865748 -0.0280000000000024"
+        rpy="0 0 0" />
+      <mass
+        value="2" />
+      <inertia
+        ixx="0.000645307879832179"
+        ixy="7.07051018732787E-07"
+        ixz="-4.33792820858052E-16"
+        iyy="8.35177631876733E-05"
+        iyz="-2.35736560203942E-17"
+        izz="0.000630301042894038" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://two_robot/meshes/leg1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://two_robot/meshes/leg1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="f3"
+    type="continuous">
+    <origin
+      xyz="0.445 0.027 0.05"
+      rpy="1.5707963 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="leg3" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="leg4">
+    <inertial>
+      <origin
+        xyz="1.24930959363168E-05 -0.049118408671998 -0.0280088220846436"
+        rpy="0 0 0" />
+      <mass
+        value="2" />
+      <inertia
+        ixx="0.000686976993493218"
+        ixy="1.01837682881422E-07"
+        ixz="-6.57447800737562E-21"
+        iyy="8.2560582005291E-05"
+        iyz="-3.01409757760955E-19"
+        izz="0.000732349480000924" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://two_robot/meshes/leg1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://two_robot/meshes/leg1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="f4"
+    type="continuous">
+    <origin
+      xyz="0.445 -0.2663 0.05"
+      rpy="1.5707963 0 3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="leg4" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="leg5">
+    <inertial>
+      <origin
+        xyz="-1.01522765634243E-05 -0.063078582626003 0.0280089323374999"
+        rpy="0 0 0" />
+      <mass
+        value="2" />
+      <inertia
+        ixx="0.000937345284994574"
+        ixy="-5.0454943021875E-08"
+        ixz="-1.40610226055501E-09"
+        iyy="0.000122183378166643"
+        iyz="2.69437910896951E-09"
+        izz="0.00101131254995923" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://two_robot/meshes/leg1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://two_robot/meshes/leg1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="f5"
+    type="continuous">
+    <origin
+      xyz="0.25 -0.3313 0.05"
+      rpy="1.5707963 0 3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="leg5" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="leg6">
+    <inertial>
+      <origin
+        xyz="-1.19396238670993E-05 -0.0538873837772517 0.0280088220810167"
+        rpy="0 0 0" />
+      <mass
+        value="2" />
+      <inertia
+        ixx="0.000785894362894106"
+        ixy="-9.03935348606885E-08"
+        ixz="6.6781596423007E-13"
+        iyy="8.87346159420206E-05"
+        iyz="-6.00159741930854E-14"
+        izz="0.000836826299557749" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://two_robot/meshes/leg1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://two_robot/meshes/leg1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="f6"
+    type="continuous">
+    <origin
+      xyz="0.055 -0.2663 0.05"
+      rpy="1.5708 0 3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="leg6" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+
+  
+  
+
+  
+  <transmission name="tran1">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="f1">
+      <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor1">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    
+  </transmission>
+  
+
+  <transmission name="tran2">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="f2">
+      <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor2">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  
+  <transmission name="tran3">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="f3">
+      <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor3">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  
+  <transmission name="tran4">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="f4">
+      <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor4">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>  
+
+  <transmission name="tran5">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="f5">
+      <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor5">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="tran6">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="f6">
+      <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor6">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  
+
+  <gazebo>
+    <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+       <robotNamespace>/two_robot</robotNamespace>     
+    </plugin>
+  </gazebo>
+  
+  <gazebo>  
+    <plugin name="gps" filename="libhector_gazebo_ros_gps.so">  
+      <updateRate>10.0</updateRate>  
+      <topicName>sensor_msgs/NavSatFix</topicName>  
+      <gaussianNoise>0.0 0.0 0.0</gaussianNoise>  
+      <offset>0 0 0</offset>  
+      <velocityGaussianNoise>0 0 0</velocityGaussianNoise>  
+      <frameId>base_link</frameId>  
+    </plugin>  
+  </gazebo>  
+
+  <gazebo reference="base_link">
+    <gravity>true</gravity>
+    <sensor name="imu_sensor" type="imu">
+      <always_on>true</always_on>
+      <update_rate>100</update_rate>
+      <visualize>true</visualize>
+      <topic>__default_topic__</topic>
+      <plugin filename="libgazebo_ros_imu_sensor.so" name="imu_plugin">
+        <topicName>imu</topicName>
+        <bodyName>base_link</bodyName>
+        <updateRateHZ>10.0</updateRateHZ>
+        <gaussianNoise>0.0</gaussianNoise>
+        <xyzOffset>0 0 0</xyzOffset>
+        <rpyOffset>0 0 0</rpyOffset>
+        <frameName>imu_link</frameName>
+      </plugin>
+      <pose>0 0 0 0 0 0</pose>
+    </sensor>
+  </gazebo>
+
+</robot>
